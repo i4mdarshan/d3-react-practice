@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open in Simple Browser",
+      "type": "shell",
+      "command": "echo 'Opened http://localhost:5173 in Simple Browser'",
+      "args": [
+        "${input:openSimpleBrowser}"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "panel": "shared",
+        "close": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "openSimpleBrowser",
+      "type": "command",
+      "command": "simpleBrowser.show",
+      "args": [
+        "http://localhost:5173"
+      ]
+    }
+  ]
+}
